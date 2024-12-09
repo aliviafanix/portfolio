@@ -29,6 +29,7 @@
 ├── 📱 Адаптивный дизайн
 ├── 🛒 Умная корзина
 ├── 📦 Каталог с фильтрами
+</details>
 
 <details>
 <summary>📝 <b>Личный блог</b></summary>
@@ -36,7 +37,7 @@
 ├── 📚 Туториалы
 ├── 💬 Комментарии
 └── 👤 Админ-панель
-
+</details>
 
 <details>
 <summary>🌤️ <b>Weather App</b></summary>
@@ -57,7 +58,7 @@ Backend
 └── 🗃️ MongoDB
 Tools
 └── 📦 Git
-
+</details>
 
 
 
