@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBlog - Блог о разработке</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">Dev<span>Blog</span></div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="tutorials.html">Туториалы</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Блог о веб-разработке</h1>
+                <p>Делюсь опытом, пишу о современных технологиях и трендах в мире веб-разработки</p>
+            </div>
+        </section>
+
+        <section class="featured-posts">
+            <div class="container">
+                <h2>Последние публикации</h2>
+                <div class="posts-grid">
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="https://habrastorage.org/getpro/habr/upload_files/980/62e/6f3/98062e6f31681c50bbe769f051bd2cee.jpg" alt="React Hooks">
+                            <span class="category">React</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date">15 марта 2024</span>
+                                <span class="read-time">5 мин чтения</span>
+                            </div>
+                            <h3>Введение в React Hooks</h3>
+                            <p>Узнайте, как использовать хуки в React для создания более чистого и эффективного кода...</p>
+                            <a href="articles/react-hooks.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image">
+                            <img src="https://i.sstatic.net/2f9Bz.png" alt="CSS Grid">
+                            <span class="category">CSS</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date">12 марта 2024</span>
+                                <span class="read-time">4 мин чтения</span>
+                            </div>
+                            <h3>Продвинутые техники CSS Grid</h3>
+                            <p>Изучите продвинутые возможности CSS Grid для создания сложных layouts...</p>
+                            <a href="articles/css-grid.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+
+                    <article class="post-card">
+                        <div class="post-image" style="left: 2px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png",
+                            "фото_профиля": "https://cdn4.cdn-telegram.org/file/BBWspruTkyAgoVrkdjIzWJ74GwN-R2cZiqEUR9TXpYkuEkh3OcuBTVwazqjhl_MGcOKrt2KBbPsP_9QLRoVcPICpz2CvWmY5hZWotUXdwzZrW51WpAhtRNqF0k5fWKxAVxc2iS54lLSuL3HRkP4_7W2euVNn_29QmCjTysACdph2YH5_QCSUEARJ-gxJssBkho9LF4jFFG3LBrrBdPZDg9OIRWmKYDvpDaRG47PCpn23DjxeV_lVTAD5VsNWt4_Fic8z9rRsRDrGkwDxoEHZedfLpTGDuycYI7xIjKoldrNpiptk_hTzoXzu3KeXfwYnpbKovHXw9W9qsK7jljvn8g.jpg" alt="JavaScript">
+                            <span class="category">JavaScript</span>
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span class="date">10 марта 2024</span>
+                                <span class="read-time">6 мин чтения</span>
+                            </div>
+                            <h3>Асинхронность в JavaScript</h3>
+                            <p>Глубокое погружение в асинхронное программирование на JavaScript...</p>
+                            <a href="articles/async-javascript.html" class="read-more">Читать далее →</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Dev<span>Blog</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">Telegram</a>
+                    <a href="#">RSS</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DevBlog. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

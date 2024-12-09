@@ -1,0 +1,492 @@
+/* Сброс стандартных стилей браузера для всех элементов */
+* {
+    margin: 0;      /* Убирает внешние отступы у всех элементов */
+    padding: 0;     /* Убирает внутренние отступы у всех элементов */
+    box-sizing: border-box;  /* Размер элемента включает padding и border */
+}
+
+/* Основные стили и цветовая схема */
+:root {
+    --primary-color: #6B4423;     /* Основной цвет - глубокий коричневый */
+    --secondary-color: #D4A373;   /* Дополнительный - теплый бежевый */
+    --accent-color: #E9C7A9;      /* Акцентный - светлый персиковый */
+    --text-color: #2C1810;        /* Цвет текста - темный коричневый */
+    --light-bg: #FDF5E6;          /* Фоновый светлый - кремовый */
+    --white: #FFFFFF;             /* Белый */
+}
+
+/* Основные стили для тела документа */
+body {
+    font-family: 'Playfair Display', serif;  /* Элегантный шрифт */
+    line-height: 1.8;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+}
+
+/* Шапка сайта */
+header {
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(107, 68, 35, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;    /* Фиксированное положение при прокрутке страницы */
+    width: 100%;       /* Ширина на весь экран */
+    top: 0;            /* Прикреплено к верхнему краю */
+    z-index: 1000;     /* Поверх других элементов */
+}
+
+/* Навигационное меню */
+nav {
+    display: flex;  /* Включает флексбокс для выравнивания элементов */
+    justify-content: space-between;  /* Распределяет пространство между элементами */
+    align-items: center;  /* Выравнивает элементы по центру по вертикали */
+    padding: 1rem 5%;    /* Отступ сверху и снизу 1rem, по бокам 5% */
+    max-width: 1200px;   /* Максимальная ширина навигации */
+    margin: 0 auto;      /* Центрирует навигацию по горизонтали */
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;        /* Флексбокс для пунктов меню */
+    list-style: none;     /* Убирает маркеры списка */
+}
+
+.nav-links li {
+    margin-left: 2rem;    /* Отступ между пунктами меню */
+}
+
+.nav-links a {
+    text-decoration: none;  /* Убирает подчеркивание ссылок */
+    color: var(--primary-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Главный экран */
+.hero {
+    background: linear-gradient(rgba(107, 68, 35, 0.3), rgba(107, 68, 35, 0.4)),
+                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2047&q=80');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem 4rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.15);
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Кнопка призыва к действию */
+.cta-button {
+    background-color: var(--primary-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 10px 20px rgba(107, 68, 35, 0.2);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    position: relative;  /* Для позиционирования псевдоэлементов */
+    overflow: hidden;    /* Скрываем выходящие за пределы эффекты */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse 2s infinite;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.cta-button:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(107, 68, 35, 0.3);
+    animation: none;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.cta-button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(107, 68, 35, 0.2);
+}
+
+/* Секции */
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 80px; /* Отступ для якорных ссылок */
+}
+
+h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* Меню */
+.menu-grid {
+    display: grid;  /* Грид-контейнер */
+    /* Автоматическое распределение колонок, минимум 250px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;     /* Отступы между элементами */
+}
+
+/* Элементы меню */
+.menu-item {
+    background-color: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(107, 68, 35, 0.1);
+    transition: all 0.4s ease;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.2);
+}
+
+/* Изображения в меню */
+.menu-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;  /* Сохраняет пропорции изображения */
+    border-radius: 20px 20px 0 0;
+    transition: transform 0.3s ease; /* Плавное увеличение при наведении */
+}
+
+.menu-item:hover img {
+    transform: scale(1.05); /* Легкое увеличение изображения при наведении */
+}
+
+.menu-item h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* О нас */
+.about-content {
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Две равные колонки */
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-content img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(107, 68, 35, 0.15);
+}
+
+/* Контакты */
+.contact-info {
+    background-color: var(--white);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Подвал */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;  /* Скрытие меню на мобильных */
+    }
+    
+    .hero h1 {
+        font-size: 2rem;  /* Уменьшение заголовка */
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;  /* Одна колонка на мобильных */
+    }
+} 
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(107, 68, 35, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(107, 68, 35, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(107, 68, 35, 0);
+    }
+} 
+
+html {
+    scroll-behavior: smooth;  /* Включаем плавную прокрутку для всей страницы */
+    scroll-padding-top: 80px; /* Отступ сверху при прокрутке, равный высоте шпки */
+} 
+
+/* Стили для формы бронирования */
+.booking-section {
+    padding: 120px 5% 5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.booking-form {
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* ��тили для подробного меню */
+.detailed-menu {
+    padding: 120px 5% 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-category {
+    margin-bottom: 4rem;
+}
+
+.menu-category h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item-detailed {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(107, 68, 35, 0.1);
+    transition: transform 0.3s;
+}
+
+.menu-item-detailed:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item-detailed h4 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-detailed .description {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.menu-item-detailed .price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Стили для сетки категорий на странице меню */
+.menu-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.category-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(107, 68, 35, 0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+    height: 300px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.category-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--white);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Стили для страниц категорий */
+.category-menu {
+    padding: 120px 5% 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item-detailed img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Адаптивный дизайн для категорий */
+@media (max-width: 768px) {
+    .menu-categories-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-card {
+        height: 200px;
+    }
+} 

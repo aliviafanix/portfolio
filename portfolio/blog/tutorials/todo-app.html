@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создание ToDo приложения на JavaScript - DevBlog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../article.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">Dev<span>Blog</span></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Главная</a></li>
+                    <li><a href="../articles.html">Статьи</a></li>
+                    <li><a href="../tutorials.html" class="active">Туториалы</a></li>
+                    <li><a href="../about.html">Обо мне</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="article-content">
+        <article class="post">
+            <div class="post-header">
+                <span class="category">JavaScript</span>
+                <h1>Создание ToDo приложения на JavaScript</h1>
+                <div class="post-meta">
+                    <span class="date">20 марта 2024</span>
+                    <span class="read-time">15 мин</span>
+                </div>
+            </div>
+
+            <div class="post-body">
+                <h2>Введение</h2>
+                <p>В этом туториале мы создадим простое, но функциональное ToDo приложение, используя чистый JavaScript.</p>
+
+                <h2>Шаг 1: Создание HTML структуры</h2>
+                <pre><code class="language-html">
+&lt;div class="todo-app"&gt;
+    &lt;h1&gt;ToDo List&lt;/h1&gt;
+    &lt;form id="todo-form"&gt;
+        &lt;input type="text" placeholder="Добавить задачу..."&gt;
+        &lt;button type="submit"&gt;Добавить&lt;/button&gt;
+    &lt;/form&gt;
+    &lt;ul id="todo-list"&gt;&lt;/ul&gt;
+&lt;/div&gt;
+                </code></pre>
+
+                <h2>Шаг 2: Стилизация приложения</h2>
+                <pre><code class="language-css">
+.todo-app {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+                </code></pre>
+
+                <h2>Шаг 3: JavaScript логика</h2>
+                <pre><code class="language-javascript">
+const form = document.getElementById('todo-form');
+const input = form.querySelector('input');
+const list = document.getElementById('todo-list');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (input.value.trim()) {
+        addTodo(input.value);
+        input.value = '';
+    }
+});
+
+function addTodo(text) {
+    const li = document.createElement('li');
+    li.textContent = text;
+    list.appendChild(li);
+}
+                </code></pre>
+
+                <div class="demo">
+                    <h3>Демо проекта</h3>
+                    <p>Посмотреть готовый проект можно на <a href="https://codepen.io/example/todo-app" target="_blank">CodePen</a></p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Dev<span>Blog</span></div>
+                <div class="footer-links">
+                    <a href="https://github.com/aliviafanix">GitHub</a>
+                    <a href="https://t.me/HETpKH">Telegram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DevBlog. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 

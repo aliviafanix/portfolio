@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">  <!-- Кодировка документа -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Настройка отображения на мобильных -->
+    <title>Кафе "Уютное"</title>  <!-- Заголовок страницы -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">  <!-- Подключение CSS стилей -->
+</head>
+<body>
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <nav>
+            <div class="logo">Кафе "Уютное"</div>  <!-- Логотип -->
+            <ul class="nav-links">  <!-- Навигационное меню -->
+                <li><a href="#main">Главная</a></li>  <!-- Ссылка на главную секцию -->
+                <li><a href="#menu">Меню</a></li>     <!-- Ссылка на меню -->
+                <li><a href="#about">О нас</a></li>    <!-- Ссылка на информацию о кафе -->
+                <li><a href="#contact">Контакты</a></li>  <!-- Ссылка на контакты -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран с приветствием -->
+    <section id="main" class="hero">
+        <div class="hero-content">
+            <h1>Добро пожаловать в кафе "Уютное"</h1>  <!-- Главный заголовок -->
+            <p>Место, где каждый момент становится особенным</p>  <!-- Подзаголовок -->
+            <button class="cta-button" onclick="window.location.href='booking.html'">Забронировать столик</button>  <!-- Кнопка призыва к действию -->
+        </div>
+    </section>
+
+    <!-- Секция с меню -->
+    <section id="menu" class="menu">
+        <h2>Наше меню</h2>
+        <div class="menu-grid">  <!-- Сетка для элементов меню -->
+            <div class="menu-item" onclick="window.location.href='coffee.html'">  <!-- Добавляем переход по клику -->
+                <img src="https://kapservis.ru/wp-content/uploads/2037055.jpg" alt="Кофе">
+                <h3>Кофе</h3>
+                <p>Ароматный свежеобжаренный кофе</p>
+            </div>
+            <div class="menu-item" onclick="window.location.href='desserts.html'">
+                <img src="https://assets.vogue.ru/photos/5f197ad487a1388e11216b40/2:3/w_2560%2Cc_limit/6787.jpg" alt="Десерты">
+                <h3>Десерты</h3>
+                <p>Домашние десерты ручной работы</p>
+            </div>
+            <div class="menu-item" onclick="window.location.href='breakfast.html'">
+                <img src="https://opis-cdn.tinkoffjournal.ru/mercury/breakfast-album-20.ronjqh.jpg" alt="Завтраки">
+                <h3>Завтраки</h3>
+                <p>Полезные и вкусные завтраки</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция "О нас" -->
+    <section id="about" class="about">
+        <h2>О нас</h2>
+        <div class="about-content">  <!-- Контейнер с информацией о кафе -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mpiJTx6R34YQMSN_qjHxVr1Sy0GvStYBWg&s" alt="Интерьер кафе">
+            <div class="about-text">  <!-- Текстовое описание -->
+                <p>Наше кафе - это уютное место в сердце города, где вы можете насладиться великолепным кофе, свежей выпечкой и домашними десертами.</p>
+                <p>Мы создаем атмосферу тепла и комфорта для каждого гостя.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <section id="contact" class="contact">
+        <h2>Контакты</h2>
+        <div class="contact-info">  <!-- Контейнер с контактной информацией -->
+            <div class="address">  <!-- Адрес -->
+                <h3>Адрес</h3>
+                <p>ул. Примерная, 123</p>
+                <p>Город, 123456</p>
+            </div>
+            <div class="hours">  <!-- Часы работы -->
+                <h3>Часы работы</h3>
+                <p>Пн-Пт: 8:00 - 22:00</p>
+                <p>Сб-Вс: 9:00 - 23:00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2024 Кафе "Уютное". Все права защищены.</p>  <!-- Копирайт -->
+    </footer>
+
+    <!-- В конец body, перед закрывающим тегом </body> добавим скрипт -->
+    <script>
+        // Плавная прокрутка для всех ссылок с хэшем
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                // Получаем высоту шапки
+                const headerHeight = document.querySelector('header').offsetHeight;
+                
+                // Прокручиваем с учетом высоты шапки
+                window.scrollTo({
+                    top: targetElement.offsetTop - headerHeight,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

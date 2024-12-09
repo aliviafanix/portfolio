@@ -1,0 +1,63 @@
+.article-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 8rem 2rem 4rem;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.post-header .category {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.post-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.post-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.post-body p {
+    margin-bottom: 1.5rem;
+}
+
+/* Добавим стили для отображения кода */
+pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.demo {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--section-bg);
+    border-radius: 10px;
+}
+
+.demo a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.demo a:hover {
+    text-decoration: underline;
+} 

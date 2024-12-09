@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Магазин электроники</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">Tech<span>Store</span></div>
+                <ul class="nav-links">
+                    <li><a href="#new">Новинки</a></li>
+                    <li><a href="#smartphones">Смартфоны</a></li>
+                    <li><a href="#laptops">Ноутбуки</a></li>
+                    <li><a href="#accessories">Аксессуары</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="search-btn">🔍</button>
+                    <button class="cart-btn">🛒 <span class="cart-count">3</span></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Новый iPhone 15 Pro</h1>
+                <p>Титановый корпус. Революционный чип A17 Pro. Невероятная камера.</p>
+                <button class="cta-button">Купить сейчас</button>
+            </div>
+            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_US?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1693009284541" alt="iPhone 15 Pro">
+        </section>
+
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2>Популярные категории</h2>
+                <div class="categories-grid">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">📱</div>
+                        <h3>Смартфоны</h3>
+                        <p>От ведущих брендов</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">💻</div>
+                        <h3>Ноутбуки</h3>
+                        <p>Для работы и игр</p>
+                    </a>
+                    <a href="#" class="category-card">
+                        <div class="category-icon">🎧</div>
+                        <h3>Аксессуары</h3>
+                        <p>Все для гаджетов</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Популярные товары</h2>
+                    <a href="#" class="view-all">Смотреть все →</a>
+                </div>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-badge">Новинка</div>
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_US?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1693009284541">
+                        <div class="product-content">
+                            <h3>iPhone 15 Pro</h3>
+                            <div class="product-meta">
+                                <span class="price">от 99 990 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-badge">Хит</div>
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-space-gray-select-201810?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1633027804000" alt="MacBook Air">
+                        <div class="product-content">
+                            <h3>MacBook Air M2</h3>
+                            <div class="product-meta">
+                                <span class="price">от 129 990 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQD83?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1660803972361" alt="AirPods Pro">
+                        <div class="product-content">
+                            <h3>AirPods Pro 2</h3>
+                            <div class="product-meta">
+                                <span class="price">24 990 ₽</span>
+                                <button class="add-to-cart">В корзину</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Быстрая доставка</h3>
+                        <p>По всей России</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Безопасная оплата</h3>
+                        <p>Все способы оплаты</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Гарантия 1 год</h3>
+                        <p>На всю технику</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    Tech<span>Store</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Информация</h4>
+                        <a href="#">О компании</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Доставка</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Каталог</h4>
+                        <a href="#">Смартфоны</a>
+                        <a href="#">Ноутбуки</a>
+                        <a href="#">Аксессуары</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Помощь</h4>
+                        <a href="#">Как заказать</a>
+                        <a href="#">Оплата</a>
+                        <a href="#">Гарантия</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechStore. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
