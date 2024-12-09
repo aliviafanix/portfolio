@@ -33,10 +33,45 @@
 
 <details>
 <summary>📝 <b>Личный блог</b></summary>
-
-└── 💳 Безопасная оплата
 ├── ✍️ Статьи о веб-разработке
 ├── 📚 Туториалы
 ├── 💬 Комментарии
 └── 👤 Админ-панель
 
+<details>
+<summary>🌤️ <b>Weather App</b></summary>
+├── ✍️ Статьи о веб-разработке
+├── 📚 Туториалы
+├── 💬 Комментарии
+└── 👤 Админ-панель
+</details>
+
+### 🛠️ Технологии
+Frontend
+├── ⚡ HTML5
+├── 🎨 CSS3
+├── 💫 JavaScript
+└── ⚛️ React
+Backend
+├── 🚀 Node.js
+└── 🗃️ MongoDB
+Tools
+└── 📦 Git
+
+
+
+
+### 📱 Связь
+
+<div align="center">
+
+[![Telegram](https://img.shields.io/badge/-%40HETpKH-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/HETpKH)
+[![GitHub](https://img.shields.io/badge/-aliviafanix-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aliviafanix)
+
+</div>
+
+---
+
+<div align="center">
+  <sub>⚡ Made with 💙 by aliviafanix</sub>
+</div>
