@@ -48,15 +48,17 @@
 </details>
 
 ### 🛠️ Технологии
-Frontend
+**Frontend**
 ├── ⚡ HTML5
 ├── 🎨 CSS3
 ├── 💫 JavaScript
 └── ⚛️ React
-Backend
+
+**Backend**
 ├── 🚀 Node.js
 └── 🗃️ MongoDB
-Tools
+
+**Tools**
 └── 📦 Git
 </details>
 
